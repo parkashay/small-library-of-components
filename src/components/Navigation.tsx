@@ -16,6 +16,10 @@ const problems: Problems[] = [
     title: "Switch list elements",
     href: "/switch-list-elements",
   },
+  {
+    title: "Footprints",
+    href: "/footprints"
+  }
 ];
 
 const Navigation = () => {
