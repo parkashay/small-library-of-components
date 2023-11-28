@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useState } from "react";
 
 interface ChildProps {
@@ -19,7 +20,7 @@ const Child = ({ message }: ChildProps) => {
       }, 1000);
       return () => clearInterval(interval); // clearing the interval after completion
     }
-  }, [currentIndex]);
+  }, [currentIndex, words, data]);
 
   return <div className="flex gap-2">{words}</div>;
 };

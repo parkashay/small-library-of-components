@@ -6,7 +6,7 @@ type Point = {
   x: number;
   y: number;
 };
-const page = () => {
+const Page = () => {
   const [points, setPoints] = useState<Point[]>([]);
   const [poppedPoints, setPoppedPoints] = useState<Point[]>([]);
   const addPoints = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -67,4 +67,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
