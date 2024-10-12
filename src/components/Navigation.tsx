@@ -23,6 +23,10 @@ const problems: Problems[] = [
     title: "Hacker Screen",
     href: "/hacker-screen",
   },
+  {
+    title: "Rating Stars",
+    href: "/rating-stars"
+  }
 ];
 
 const Navigation = () => {
