@@ -33,4 +33,3 @@ export default function GamesPage() {
     </div>
   );
 }
-import Tetris from "@/components/games/tetris";
