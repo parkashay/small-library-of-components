@@ -1,36 +1,17 @@
 "use client";
 import { components } from "@/data";
+import { cn } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { NavigateBack } from "./common/navigate-back";
 
 const Navigation = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
   return (
     <div className="py-4">
-      {!isHome && (
-        <Link
-          href={"/"}
-          className="flex items-center gap-2 text-lg font-semibold mb-6 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          Home
-        </Link>
-      )}
+      {!isHome && <NavigateBack href="/" text="Home" classsName="mb-4" />}
 
       <h3 className="text-sm uppercase text-slate-500 font-medium mb-3 px-3">Components</h3>
 
@@ -38,7 +19,13 @@ const Navigation = () => {
         {components.map((component) => (
           <Link
             href={component.href}
-            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group"
+            className={cn(
+              "flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group",
+              {
+                "bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400":
+                  pathname.includes(component.href),
+              }
+            )}
             key={component.title}
           >
             <span className="flex items-center justify-center w-8 h-8 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/40 transition-colors">
@@ -54,7 +41,7 @@ const Navigation = () => {
       <div className="mt-8 px-3 py-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
         <h3 className="text-sm font-medium mb-2">About</h3>
         <p className="text-sm text-slate-600 dark:text-slate-400">
-          A collection of reusable React components created by Prakash Poudel
+          A collection of reusable React components created by Prakash Poudel (for personal use.)
         </p>
         <a
           href="https://github.com/parkashay"

@@ -6,12 +6,6 @@ export const components = [
     icon: "⭐",
   },
   {
-    title: "Delayed Response",
-    description: "Component demonstrating async behavior handling",
-    href: "/delayed-response",
-    icon: "⏱️",
-  },
-  {
     title: "Switch List Elements",
     description: "Dynamic list with reordering capabilities",
     href: "/switch-list-elements",
@@ -34,5 +28,11 @@ export const components = [
     description: "Interactive container component with draggable elements",
     href: "/draggable-container",
     icon: "🖱️",
+  },
+  {
+    title: "Games",
+    description: "Collection of interactive games for entertainment",
+    href: "/games",
+    icon: "🎮",
   },
 ];

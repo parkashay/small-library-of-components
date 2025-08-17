@@ -9,10 +9,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/vercel.svg')] opacity-5 bg-repeat-space"></div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            React Component Library
+            Random React Library
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            A collection of reusable, customizable React components for modern web applications
+            This is just for personal use so I bombarded everything in one repo. These are stuffs I
+            built in my free time. Ok, I might have <strong>vibe-coded</strong> some of them.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -22,7 +23,7 @@ export default function Home() {
               Explore Components
             </Link>
             <Link
-              href="https://github.com/parkashay"
+              href="https://github.com/parkashay/small-library-of-components"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-slate-700 hover:bg-slate-800 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
