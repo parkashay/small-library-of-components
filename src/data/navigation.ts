@@ -1,4 +1,4 @@
-export const components = [
+export const navigationItems = [
   {
     title: "Rating Stars",
     description: "Interactive star rating component with hover effects",
@@ -18,12 +18,6 @@ export const components = [
     icon: "👣",
   },
   {
-    title: "Hacker Screen",
-    description: "Matrix-style animation effect for creative displays",
-    href: "/hacker-screen",
-    icon: "💻",
-  },
-  {
     title: "Draggable Container",
     description: "Interactive container component with draggable elements",
     href: "/draggable-container",
@@ -34,5 +28,11 @@ export const components = [
     description: "Collection of interactive games for entertainment",
     href: "/games",
     icon: "🎮",
+  },
+  {
+    title: "Canvas Playground",
+    description: "Interactive canvas playground for testing and prototyping",
+    href: "/canvas",
+    icon: "🖼️",
   },
 ];

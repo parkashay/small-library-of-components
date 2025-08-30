@@ -1,10 +1,10 @@
 "use client";
-import { components } from "@/data";
 import { cn } from "@/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { NavigateBack } from "./common/navigate-back";
+import { navigationItems } from "@/data/navigation";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -13,10 +13,12 @@ const Navigation = () => {
     <div className="py-4">
       {!isHome && <NavigateBack href="/" text="Home" classsName="mb-4" />}
 
-      <h3 className="text-sm uppercase text-slate-500 font-medium mb-3 px-3">Components</h3>
+      <h3 className="text-sm uppercase text-slate-500 font-medium mb-3 px-3">
+        Components
+      </h3>
 
       <div className="flex flex-col gap-1">
-        {components.map((component) => (
+        {navigationItems.map((component) => (
           <Link
             href={component.href}
             className={cn(
@@ -41,7 +43,8 @@ const Navigation = () => {
       <div className="mt-8 px-3 py-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
         <h3 className="text-sm font-medium mb-2">About</h3>
         <p className="text-sm text-slate-600 dark:text-slate-400">
-          A collection of reusable React components created by Prakash Poudel (for personal use.)
+          A collection of reusable React components created by Prakash Poudel (for
+          personal use.)
         </p>
         <a
           href="https://github.com/parkashay"

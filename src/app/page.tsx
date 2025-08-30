@@ -1,4 +1,4 @@
-import { components } from "@/data";
+import { navigationItems } from "@/data/navigation";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,8 +12,9 @@ export default function Home() {
             Random React Library
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            This is just for personal use so I bombarded everything in one repo. These are stuffs I
-            built in my free time. Ok, I might have <strong>vibe-coded</strong> some of them.
+            This is just for personal use so I bombarded everything in one repo. These are
+            stuffs I built in my free time. Ok, I might have <strong>vibe-coded</strong>{" "}
+            some of them.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
@@ -48,12 +49,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Featured Components</h2>
           <p className="text-slate-600 dark:text-slate-400 mb-12 text-center max-w-2xl mx-auto">
-            Explore our collection of reusable React components that can be integrated into your
-            projects
+            Explore our collection of reusable React components that can be integrated
+            into your projects
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {components.map((component) => (
+            {navigationItems.map((component) => (
               <Link
                 key={`featured-${component.title}`}
                 href={component.href}
@@ -65,7 +66,9 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {component.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400">{component.description}</p>
+                <p className="text-slate-600 dark:text-slate-400">
+                  {component.description}
+                </p>
                 <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-medium">
                   View Component
                   <svg
@@ -94,9 +97,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">About This Library</h2>
           <p className="text-lg text-slate-700 dark:text-slate-300 mb-6 text-center">
-            This collection showcases reusable React components that can be easily integrated into
-            your projects. Each component is designed to be customizable, accessible, and
-            performance-optimized.
+            This collection showcases reusable React components that can be easily
+            integrated into your projects. Each component is designed to be customizable,
+            accessible, and performance-optimized.
           </p>
           <div className="flex justify-center">
             <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
